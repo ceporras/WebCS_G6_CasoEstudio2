@@ -434,9 +434,9 @@ $casas = ConsultarCasas();
                                             echo '<span class="texto-secundario">-</span>';
 
                                         } else {
-
+                                                $fecha = date('d/m/Y', strtotime($casa["FechaAlquiler"]));
                                             echo htmlspecialchars(
-                                                $casa["FechaAlquiler"]
+                                                $fecha
                                             );
                                         }
 
