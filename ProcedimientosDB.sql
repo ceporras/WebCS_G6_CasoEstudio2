@@ -24,7 +24,17 @@ WHERE IdCasa = IdCasa_sp;
 END$$
 DELIMITER ;
 
+CREATE PROCEDURE sp_ConsultarCasasDisponibles()
+BEGIN
 
+    SELECT IdCasa,
+           DescripcionCasa,
+           PrecioCasa
+    FROM CasasSistema
+    WHERE UsuarioAlquiler IS NULL
+       OR UsuarioAlquiler = '';
+
+END;
 
 
 INSERT INTO CasasSistema (DescripcionCasa,PrecioCasa,UsuarioAlquiler,FechaAlquiler)

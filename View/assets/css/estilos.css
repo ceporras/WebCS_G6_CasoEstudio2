@@ -964,4 +964,218 @@ a {
         text-align: center;
     }
 
+    /* ===========================
+   PÁGINAS INTERNAS
+=========================== */
+
+.pagina-contenido {
+    min-height: calc(100vh - 190px);
+    padding: 70px 24px;
+    background: #f5f7fa;
+}
+
+.formulario-seccion,
+.consulta-seccion {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* ===========================
+   ENCABEZADOS
+=========================== */
+
+.formulario-encabezado {
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.formulario-encabezado h1,
+.consulta-encabezado h1 {
+    margin: 8px 0 10px;
+    font-size: 34px;
+    color: #172033;
+}
+
+.formulario-encabezado p,
+.consulta-encabezado p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* ===========================
+   FORMULARIO
+=========================== */
+
+.formulario-tarjeta {
+    max-width: 620px;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.campo-formulario label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.campo-formulario input,
+.campo-formulario select {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    font-size: 15px;
+    background: #ffffff;
+    transition: 0.2s ease;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus {
+    outline: none;
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+.campo-formulario input[readonly] {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+.btn-formulario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 9px;
+    background: #16a34a;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-formulario:hover {
+    background: #15803d;
+    transform: translateY(-1px);
+}
+
+
+/* ===========================
+   CONSULTA
+=========================== */
+
+.consulta-encabezado {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.tabla-casas {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-casas th {
+    padding: 17px 20px;
+    background: #f9fafb;
+    color: #4b5563;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tabla-casas td {
+    padding: 18px 20px;
+    color: #374151;
+    border-bottom: 1px solid #edf0f2;
+}
+
+.tabla-casas tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-casas tbody tr:hover {
+    background: #fafafa;
+}
+
+.precio-tabla {
+    font-weight: 600;
+}
+
+
+/* ===========================
+   ESTADOS
+=========================== */
+
+.estado {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.estado.disponible {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.estado.alquilada {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+
+    .pagina-contenido {
+        padding: 45px 18px;
+    }
+
+    .consulta-encabezado {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .formulario-tarjeta {
+        padding: 25px;
+    }
+
+    .formulario-encabezado h1,
+    .consulta-encabezado h1 {
+        font-size: 28px;
+    }
+}
+
+
 }
